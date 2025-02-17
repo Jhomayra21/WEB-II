@@ -130,7 +130,6 @@ body{
     }
 }
 
-  /* 🖥️ Computadoras */
 @media screen and (min-width: 1025px) {
     *{
         padding: 0;
