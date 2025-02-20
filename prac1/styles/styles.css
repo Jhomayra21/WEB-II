@@ -119,26 +119,8 @@ body{
         padding: 0;
         margin: 0;
     }
-    .header{
-        padding: 10% 0% 0% 15%;
-    }
-    .presentacion__contenido{
-        width: 60%;
-    }
-    .presentacion__enlaces__link{
-        width: 75%;
-    }
-}
+    /* .header{ */
 
-@media screen and (min-width: 1025px) {
-    *{
-        padding: 0;
-        margin: 0;
-    }
-    .presentacion__contenido{
-        width: 60%;
-    }
-    .presentacion__enlaces__link{
-        width: 75%;
-    }
-}
+    font-size: ;
+
+    
