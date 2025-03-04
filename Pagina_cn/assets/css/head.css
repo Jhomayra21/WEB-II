@@ -1,16 +1,17 @@
 .head{
-    color: aliceblue;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
     width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: absolute;
-    border-bottom: 1px solid #0b0606;
+    border-bottom: 1px solid #000000;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    background-color:rgb(8, 21, 22);
-    justify-content: space-between;
+    background-color:#000000;
+    justify-content: space-around;
 
 }
 .head__logo{

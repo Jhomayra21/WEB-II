@@ -1,10 +1,16 @@
-.elemento{display: flex;
-    background-color: #f4f6f1;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+body{
+    background-color: #48b3d9;
+}.elemento{
+    display: flex;
+    background-color: #ffffff;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 5%;
+    border: 5px solid #328fa0;
+    border-radius: 50px;
 }
 .elemento__titulo{
     color: rgb(49, 49, 49);
@@ -20,6 +26,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
+    
 }
 .elemento__figura--imagen{
     width: 50vw;
@@ -34,8 +41,15 @@
 }
 .elemento__boton{
     font-family: 'Montserrat',sans-serif;
-    color: #e21919;
+    border: 20px solid #000000;
+    background: rgb(0, 0, 0);
+    border-radius: 50px;
+    color: white;
     border-color: 3px solid #e21919;
     margin: 0 auto;
     justify-content: space-around;
+}
+.elemento__boton:hover{
+    border: 30px solid#a2125d;
+    background: #a2125d;
 }
