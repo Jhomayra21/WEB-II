@@ -14,5 +14,5 @@ for (let i=1; i<=numeros.length;i++){
         sum1++
     }
 }
-console.log("total numeros pares:"+ sum);
+console.log(" pares:"+ sum);
 console.log("total numeros impares:" +sum1);
