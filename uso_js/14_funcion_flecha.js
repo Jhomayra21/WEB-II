@@ -45,7 +45,7 @@ const procesarDatos =(datos) =>{
     return datos
     .filter(datos => datos.calificacion > 51)
     .map(datos => {
-        const{materia}= materia;
+        const{materia}= datos;
         return materia.length > 5 ? materia.toUpperCase() : materia.toLowerCase() // ? operador terniario
     });
 }
