@@ -4,7 +4,7 @@ console.log(numeros);
 let sum=0;
 let sum1=0;
 
-//Seleccionar pares
+//Seleccionar pares e impares
 
 for (let i=1; i<=numeros.length;i++){
     if (i%2==0){
