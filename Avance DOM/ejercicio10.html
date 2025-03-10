@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uso del appendChild</title>
+</head>
+<body>
+    
+    <div id="contenedor">Contenedor Div existente</div>
+    <button id="boton">Agregar elemento</button>
+    <script>
+        //del primer div se crea un nuevo div como hijo
+        
+        const nuevoElemento=document.createElement('div');
+        nuevoElemento.textContent='Nuevo elemento';
+        const contenedor =document.getElementById('contenedor');
+        contenedor.appendChild(nuevoElemento);
+    </script>
+</body>
+</html>
