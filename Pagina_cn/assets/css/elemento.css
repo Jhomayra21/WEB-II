@@ -2,7 +2,7 @@ body{
     background-color: #48b3d9;
 }.elemento{
     display: flex;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     flex-direction: column;
