@@ -1,7 +1,7 @@
 const API_URL='http://localhost:3000/posts' //este enlace se recupera de la conexion del archivo json  que hicimos en la terminal
 
 const getData = ()=>{
-    fetch(API_URL)
+    fetch(API_URL)                          // esta funcion fetch permite realizar la conexion
         .then(response =>{
             if(!response.ok){
                 throw new Error( `Error en la peticion get el estado es:${response.status}`)
