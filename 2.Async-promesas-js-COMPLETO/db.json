@@ -1,0 +1,33 @@
+{
+  "perfil": [
+    {
+      "nombre": "dwe",
+      "email": "dedwdw",
+      "id": "6dd9c7a3-cdc0-4d83-9e2d-57989841b0cf"
+    },
+    {
+      "id": "f7ddd264-2361-4bf3-bd30-1f6663d0582b",
+      "nombre": "pepito",
+      "email": "pepito123@gmail.com"
+    },
+    {
+      "nombre": "admin",
+      "email": "admi@gmail.com",
+      "id": "60fade60-d548-418e-b0c1-a6478d32772b"
+    }
+  ],
+  "productos": [
+    {
+      "id": "00fb951c-8b69-4884-af15-b4216204e590",
+      "nombre": "Pato",
+      "precio": "5",
+      "descripcion": "pato de juguete"
+    },
+    {
+      "id": "fc0ee44e-5856-4cdf-864d-f9fac13c5e7d",
+      "nombre": "asv",
+      "precio": "65",
+      "descripcion": "dsvs"
+    }
+  ]
+}
