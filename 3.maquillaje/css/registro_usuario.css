@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #d8a298;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    height: 700px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    background-image: url('https://i.pinimg.com/736x/33/c6/48/33c648ef4309eba97609dd22c520a653.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    width: 50%;
+    background-color: #e298a7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-section h1 {
+    font-size: 24px;
+    color: #37474f;
+    margin-bottom: 10px;
+}
+
+.left-section p {
+    
+    color: #607d8b;
+    font-size: 14px;
+}
+
+.right-section {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-section h2 {
+    font-size: 20px;
+    color: #37474f;
+    margin-bottom: 20px;
+}
+
+.social-login {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-login button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.social-login button img {
+    width: 20px;
+    height: 20px;
+}
+
+.divider {
+    text-align: center;
+    color: #607d8b;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #37474f;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.create-account-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f5a192;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.create-account-btn:hover {
+    background-color: #ffbeb3;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #607d8b;
+}
+
+.login-link a {
+    color:#ffbeb3;
+    text-decoration: none;
+}
