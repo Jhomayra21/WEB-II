@@ -35,7 +35,7 @@ a{
     text-decoration: none;
     cursor: pointer;
 }
-.nav-links li:hover ,.nav-links li a:hover {
+.nav-links li:hover  {
     background-color: #ffffffcc; 
     color: #d8a298;
 }
