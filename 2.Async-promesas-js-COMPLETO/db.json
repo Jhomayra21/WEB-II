@@ -4,14 +4,19 @@
       "nombre": "admin",
       "email": "admi@gmail.com",
       "id": "60fade60-d548-418e-b0c1-a6478d32772b"
+    },
+    {
+      "nombre": "Carolina",
+      "email": "carrito123@gmail.com",
+      "id": "24af945a-3a9d-4cc7-be66-7510187739ee"
     }
   ],
   "productos": [
     {
-      "id": "c8dcbbe7-b532-4da0-b96d-b7cb0d0530c6",
       "nombre": "Pelota ",
       "precio": "65",
-      "descripcion": "pelota de perro"
+      "descripcion": "pelota de perr",
+      "id": "c8dcbbe7-b532-4da0-b96d-b7cb0d0530c6"
     },
     {
       "id": "d5702ff7-dd4c-4107-87c3-74c7b72a20d2",
