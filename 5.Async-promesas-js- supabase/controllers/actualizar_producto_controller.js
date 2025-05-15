@@ -11,8 +11,9 @@ const obtenerInfo = async () => {
     const descripcion = document.querySelector("[data-descripcion-producto]");
 
     try {
-        const producto = await productService.obtenerProducto(id);
-        if (producto.nombre && producto.precio && producto.descripcion) {
+        const productoArray = await productService.obtenerProducto(id);
+        const producto = productoArray[0];
+        if (producto && producto.nombre && producto.precio && producto.descripcion) {
             nombre.value = producto.nombre;
             precio.value = producto.precio;
             descripcion.value = producto.descripcion;

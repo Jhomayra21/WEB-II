@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../assets/css/componentes/table.css" />
     <link rel="stylesheet" href="../assets/css/componentes/button.css" />
     <link rel="stylesheet" href="../assets/css/componentes/modal.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/busqueda.css"/>
   </head>
   <body>
     <header class="header container">
@@ -30,7 +31,7 @@
       <nav>
         <ul class="header__list-nav">
           <li class="header__link"><a href="#">Dashboard</a></li>
-          <li class="header__link"><a href="./error_producto.html">Productos</a></li>
+          <li class="header__link"><a href="./lista_productos.html">Productos</a></li>
           <li class="header__link"><a href="./lista_cliente.html">Clientes</a></li>
           <li class="header__link"><a href="./lista_pets.html">Pets</a></li>
         </ul>
@@ -38,6 +39,15 @@
     </header>
 
     <main class="clientes-container">
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          class="search__input"
+          placeholder="Buscar por nombre o email..."
+        />
+        <button class="simple-button simple-button--search">Buscar</button>
+      </div>
       <table class="table">
         <thead>
           <tr>
@@ -53,7 +63,6 @@
           </tr>
         </thead>
         <tbody data-table>
-          
         </tbody>
       </table>
       <div class="modal-container modal--close">

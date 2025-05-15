@@ -12,8 +12,9 @@ const obtenerInfo = async () => {
     const dueño = document.querySelector("[data-dueño-mascota]");
 
     try {
-        const mascota = await mascotaService.obtenerMascota(id);
-        if (mascota.nombre && mascota.especie && mascota.raza && mascota.dueño) {
+        const mascotaArray = await mascotaService.obtenerMascota(id);
+        const mascota = mascotaArray[0];
+        if (mascota && mascota.nombre && mascota.especie && mascota.raza && mascota.dueño) {
             nombre.value = mascota.nombre;
             especie.value = mascota.especie;
             raza.value = mascota.raza;

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../assets/css/componentes/table.css" />
     <link rel="stylesheet" href="../assets/css/componentes/button.css" />
     <link rel="stylesheet" href="../assets/css/componentes/modal.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/busqueda.css"/>
 </head>
 <body>
     <header class="header container">
@@ -37,6 +38,15 @@
     </nav>
     </header>
     <main class="clientes-container">
+        <div class="search-container">
+        <input
+            type="text"
+            id="searchInput"
+            class="search__input"
+            placeholder="Buscar por nombre o email..."
+        />
+        <button class="simple-button simple-button--search">Buscar</button>
+        </div>
     <table class="table">
         <thead>
             <tr>
