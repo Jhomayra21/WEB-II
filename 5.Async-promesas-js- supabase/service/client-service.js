@@ -238,10 +238,25 @@ const actualizarCliente=(nombre,email,id)=>{                 //noo modificar id 
         throw error;
     });
 }
+const buscarClientes = (query) => {
+    const url = `${API_URL}?or=(nombre.ilike.*${query}*,email.ilike.*${query}*)&select=*`;
+    return fetch(url, { headers: HEADERS })
+        .then(res => {
+            if (!res.ok) throw new Error('Error al buscar clientes');
+            return res.json();
+        })
+        .catch(error => {
+            console.error('Error al buscar clientes:', error);
+            throw error;
+        });
+};
+
+
 export const clientService={
     listaclientes,
     crearCliente,
     eliminarCliente,
     clientes,
-    actualizarCliente
+    actualizarCliente,
+    buscarClientes
 };

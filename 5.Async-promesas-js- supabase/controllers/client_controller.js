@@ -54,6 +54,8 @@ clientService.listaclientes()
 
 // _----------- mejorado codigo ordenado limpio--------------
 const table = document.querySelector("[data-table]");
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.querySelector(".simple-button--search");
 
 clientService.listaclientes()
     .then(data => {
@@ -63,3 +65,40 @@ clientService.listaclientes()
         });
     })
     .catch(error => alert("Ocurrio un error al cargar los clientes"));
+
+function cargarClientes() {
+    table.innerHTML = "";
+    clientService.listaclientes()
+    .then(data => {
+        data.forEach(({ nombre, email, id }) => {
+        const fila = crear_nueva_fila(nombre, email, id);
+        table.appendChild(fila);
+        });
+    })
+    .catch(error => {
+        console.error(error);
+        alert("Error al cargar los clientes");
+    });
+}
+async function buscarClientes(query) {
+    try {
+    const resultados = await clientService.buscarClientes(query);
+    table.innerHTML = "";
+    resultados.forEach(({ nombre, email, id }) => {
+        const fila = crear_nueva_fila(nombre, email, id);
+        table.appendChild(fila);
+    });
+    } catch (error) {
+        console.error(error);
+        alert("Error al buscar clientes");
+    }
+}
+searchButton.addEventListener('click', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    if (query === "") {
+        cargarClientes();
+    } else {
+        buscarClientes(query);
+    }
+});
+

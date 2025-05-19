@@ -43,6 +43,8 @@ const crear_nueva_fila = (nombre, especie, raza, dueño, id) => {
 };
 
 const table = document.querySelector("[data-table]");
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.querySelector(".simple-button--search");
 
 mascotaService.listarMascotas()
     .then(data => {
@@ -52,3 +54,38 @@ mascotaService.listarMascotas()
         });
     })
     .catch(error => alert("Ocurrió un error al cargar las mascotas"));
+function cargarMascotas() {
+    table.innerHTML = "";
+    mascotaService.listarMascotas()
+    .then(data => {
+        data.forEach(({ nombre, especie, raza, dueño, id }) => {
+        const fila = crear_nueva_fila(nombre, especie, raza, dueño, id);
+        table.appendChild(fila);
+        });
+    })
+    .catch(error => {
+        console.error(error);
+        alert("Error al cargar los mascotas");
+    });
+}
+async function buscarMascota(query) {
+    try {
+    const resultados = await mascotaService.buscarMascota(query);
+    table.innerHTML = "";
+    resultados.forEach(({ nombre, especie, raza, dueño, id }) => {
+        const fila = crear_nueva_fila(nombre, especie, raza, dueño, id);
+        table.appendChild(fila);
+    });
+    } catch (error) {
+        console.error(error);
+        alert("Error al buscar mascotas");
+    }
+}
+searchButton.addEventListener('click', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    if (query === "") {
+        cargarMascotas();
+    } else {
+        buscarMascota(query);
+    }
+});

@@ -78,13 +78,29 @@ const actualizarProducto = (nombre, precio, descripcion, id) => {
         throw error;
     });
 };
-
+const buscarProductos = (query) => {
+    if (!isNaN(query) && query.trim() !== "") {
+        return fetch(`${API_URL}?precio=eq.${query}&select=*`, { headers: HEADERS })
+            .then(res => {
+                if (!res.ok) throw new Error("No se pudo buscar productos por precio");
+                return res.json();
+            });
+    } else {
+        const filtro = `or=(nombre.ilike.*${query}*,descripcion.ilike.*${query}*)`;
+        return fetch(`${API_URL}?${filtro}&select=*`, { headers: HEADERS })
+            .then(res => {
+                if (!res.ok) throw new Error("No se pudo buscar productos");
+                return res.json();
+            });
+    }
+};
 export const productService = {
     listarProductos,
     crearProducto,
     eliminarProducto,
     obtenerProducto,
-    actualizarProducto
+    actualizarProducto,
+    buscarProductos
 };
 
 

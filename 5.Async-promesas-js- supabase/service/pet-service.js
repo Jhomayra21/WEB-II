@@ -79,11 +79,24 @@ const actualizarMascota = (nombre, especie, raza, dueño, id) => {
         throw error;
     });
 };
+const buscarMascota = (query) => {
+    const url = `${API_URL}?or=(nombre.ilike.*${query}*,especie.ilike.*${query}*,raza.ilike.*${query}*,dueño.ilike.*${query}*)&select=*`;
+    return fetch(url, { headers: HEADERS })
+        .then(res => {
+            if (!res.ok) throw new Error('Error al buscar mascotas');
+            return res.json();
+        })
+        .catch(error => {
+            console.error('Error al buscar mascotas:', error);
+            throw error;
+        });
+};
 
 export const mascotaService = {
     listarMascotas,
     crearMascota,
     eliminarMascota,
     obtenerMascota,
-    actualizarMascota
+    actualizarMascota,
+    buscarMascota
 };

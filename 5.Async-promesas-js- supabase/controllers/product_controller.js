@@ -39,6 +39,8 @@ const crearNuevaFila = (nombre, precio, descripcion, id) => {
 };
 
 const table = document.querySelector("[data-table]");
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.querySelector(".simple-button--search");
 
 productService
     .listarProductos()
@@ -49,3 +51,36 @@ productService
         });
     })
     .catch((error) => alert("error al cargar los productos"));
+    
+function cargarProductos() {
+    table.innerHTML = "";
+    productService.listarProductos()
+        .then(data => {
+            data.forEach(({ nombre, precio, descripcion, id }) => {
+                const fila = crearNuevaFila(nombre, precio, descripcion, id);
+                table.appendChild(fila);
+            });
+        })
+        .catch(error => alert("error al cargar los productos"));
+}
+
+function buscarProductos(query) {
+    table.innerHTML = "";
+    productService.buscarProductos(query)
+        .then(data => {
+            data.forEach(({ nombre, precio, descripcion, id }) => {
+                const fila = crearNuevaFila(nombre, precio, descripcion, id);
+                table.appendChild(fila);
+            });
+        })
+        .catch(error => alert("error al buscar productos"));
+}
+
+searchButton.addEventListener('click', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    if (query === "") {
+        cargarProductos();
+    } else {
+        buscarProductos(query);
+    }
+});

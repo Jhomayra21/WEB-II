@@ -1,0 +1,62 @@
+.dashboard-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .dashboard-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        .dashboard-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Cuadrícula de 2 columnas */
+            gap: 1rem;
+        }
+        .dashboard-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background: #f5f5f5; /* Color base, se sobrescribirá con colores específicos */
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 120px; /* Altura fija para consistencia */
+        }
+        .dashboard-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .dashboard-link-icon {
+            font-size: 2rem; /* Tamaño del ícono */
+            margin-bottom: 0.5rem;
+        }
+        /* Colores pastel para cada tarjeta */
+        .dashboard-link:nth-child(1) {
+            background: #d9f2e6; /* Verde pastel para Clientes */
+        }
+        .dashboard-link:nth-child(2) {
+            background: #fce1e1; /* Rosa pastel para Mascotas */
+        }
+        .dashboard-link:nth-child(3) {
+            background: #e6e6ff; /* Azul pastel para Productos */
+        }
+        .dashboard-link:nth-child(4) {
+            background: #fff2cc; /* Amarillo pastel para Registrar Cliente */
+        }
+        .dashboard-link:nth-child(5) {
+            background: #e1f5fe; /* Celeste pastel para Registrar Mascota */
+        }
+        .dashboard-link:nth-child(6) {
+            background: #f3e5f5; /* Lila pastel para Registrar Producto */
+        }
